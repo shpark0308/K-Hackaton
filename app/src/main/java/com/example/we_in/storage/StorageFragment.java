@@ -29,7 +29,6 @@ public class StorageFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_storage,container,false);
 
-
         images = new ArrayList<>();
         images.add(new Images(true,R.drawable.image1,"경복궁","사적 제117호. 도성의 북쪽에 있다고 하여 북궐(北闕)이라고도 불리었다. 조선왕조의 건립에 따라 창건되어 초기에 정궁으로 사용되었으나 임진왜란 때 전소된 후 오랫동안 폐허로 남아 있다가 조선 말기 고종 때 중건되어 잠시 궁궐로 이용되었다."));
         images.add(new Images(true,R.drawable.image2,"두번째","설명"));
@@ -51,7 +50,6 @@ public class StorageFragment extends Fragment {
             public void onPageSelected(int position) {
                 TextView page=viewGroup.findViewById(R.id.page);
                 page.setText(position+1+"");
-                //  page.setTextColor(Color.parseColor("#FF5D21"));
             }
 
             @Override
