@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.we_in.R;
 
-public class CameraCardDownFragment extends Fragment {
+public class CameraCardDownFragment extends Fragment { // Test
     ViewGroup viewGroup;
     @Nullable
     @Override
