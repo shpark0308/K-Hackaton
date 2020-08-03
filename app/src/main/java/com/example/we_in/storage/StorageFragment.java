@@ -1,0 +1,65 @@
+package com.example.we_in.storage;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+
+import com.example.we_in.R;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StorageFragment extends Fragment {
+    ViewGroup viewGroup;
+
+    List<Images> images;
+    TextView tv_picnum;
+    ViewPager viewPager;
+    Adapter adapter;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_storage,container,false);
+
+
+        images = new ArrayList<>();
+        images.add(new Images(true,R.drawable.image1,"경복궁","사적 제117호. 도성의 북쪽에 있다고 하여 북궐(北闕)이라고도 불리었다. 조선왕조의 건립에 따라 창건되어 초기에 정궁으로 사용되었으나 임진왜란 때 전소된 후 오랫동안 폐허로 남아 있다가 조선 말기 고종 때 중건되어 잠시 궁궐로 이용되었다."));
+        images.add(new Images(true,R.drawable.image2,"두번째","설명"));
+        images.add(new Images(true,R.drawable.image3,"세번째","설명"));
+
+        tv_picnum = viewGroup.findViewById(R.id.tv_picnum);
+        tv_picnum.setText("/"+images.size());
+
+        adapter=new Adapter(images,this.getContext());
+        viewPager=viewGroup.findViewById(R.id.viewPager);
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                TextView page=viewGroup.findViewById(R.id.page);
+                page.setText(position+1+"");
+                //  page.setTextColor(Color.parseColor("#FF5D21"));
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+        return viewGroup;
+    }
+}

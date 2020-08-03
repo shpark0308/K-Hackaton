@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">We-in</string>
+
+    <string name="stamp_title_light">내가 지금까지 모은</string>
+    <string name="stamp_title_bold">스탬프</string>
+
+    <string name="storage_title_light">내가 지금까지 가본</string>
+    <string name="storage_title_bold">과거들</string>
+
+    <string name="value_title_size">27.15dp</string>
+    <string name="value_stamp_size">118.85dp</string>
+
+    <string name="info01">사적 제117호. 도성의 북쪽에 있다고 하여 북궐(北闕)이라고</string>
+    <string name="info02">도 불리었다. 조선왕조의 건립에 따라 창건되어 초기에</string>
+    <string name="info03">정궁으로 사용되었으나 임진왜란 때 전소된 후 오랫동안 폐허로 남아</string>
+    <string name="info04">있다가 조선 말기 고종 때 중건되어 잠시 궁궐로 이용되었다 .</string>
+    <string name="info05">이성계가 왕이 되어 곧 도읍을 옮기기로 하고, 즉위 3년째인</string>
+    <string name="info06">1394년에 신도궁궐조성도감(新都宮闕造成都監)을 열어</string>
+    <string name="info07">궁의 창건을 시작하였으며 이듬해에 완성하였다.</string>
+    <string name="info08">이 당시 궁의 규모는 390여 칸으로 크지 않았다. 정전(正殿)인</string>
+    <string name="info09">근정전(勤政殿) 5칸에 상하층 월대(月臺)와 행랑·근정문</string>
+    <string name="info10">·천랑·각루(角樓)·강녕전(康寧殿) 7칸, 연생전(延生殿) </string>
+    <string name="info11">3칸, 경성전 (慶成殿) 3칸, 왕의 평상시 집무처인 </string>
+    <string name="info12">보평청(報平廳) 5칸 외에 상의원·중추원·삼군부(三軍府)</string>
+    <string name="info13">등이 마련되었다.</string>
+</resources>

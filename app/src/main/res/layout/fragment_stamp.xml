@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="19.75dp"
+        android:layout_marginTop="59dp">
+        <TextView
+            android:id="@+id/tv_stamp_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stamp_title_light"
+            android:textSize="27.15dp"
+            android:textColor="#272727"
+            android:fontFamily="@font/apple_sd_gothic_neo_l"/>
+        <TextView
+            android:id="@+id/tv_stamp_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stamp_title_bold"
+            android:textSize="27.15dp"
+            android:textColor="#272727"
+            android:fontFamily="@font/apple_sd_gothic_neo_b"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="46.5dp"
+        android:layout_marginTop="31.43dp">
+        <TableRow
+            android:layout_marginBottom="40dp">
+            <ImageView
+                android:id="@+id/img_place1"
+                android:src="@drawable/place1_stamp"
+                android:layout_width="135.85dp"
+                android:layout_height="135.85dp"
+                android:layout_marginRight="46.5dp"/>
+
+            <ImageView
+                android:id="@+id/img_place2"
+                android:src="@drawable/place2_board"
+                android:layout_width="135.67dp"
+                android:layout_height="135.67dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="40dp">
+            <ImageView
+                android:id="@+id/img_place3"
+                android:src="@drawable/place3_board"
+                android:layout_width="135.67dp"
+                android:layout_height="135.67dp"
+                android:layout_marginRight="46.5dp"/>
+
+            <ImageView
+                android:id="@+id/img_place4"
+                android:src="@drawable/place4_board"
+                android:layout_width="135.67dp"
+                android:layout_height="135.67dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="40dp">
+            <ImageView
+                android:id="@+id/img_place5"
+                android:src="@drawable/place5_board"
+                android:layout_width="135.67dp"
+                android:layout_height="135.67dp"
+                android:layout_marginRight="46.5dp"/>
+
+            <ImageView
+                android:id="@+id/img_place6"
+                android:src="@drawable/place6_board"
+                android:layout_width="135.67dp"
+                android:layout_height="135.67dp"/>
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>
+
+</ScrollView>

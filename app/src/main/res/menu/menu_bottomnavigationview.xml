@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/stampItem"
+        android:icon="@drawable/stampitem_selector"
+        android:title="스탬프"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/cameraItem"
+        android:icon="@drawable/cameraitem_selector"
+        android:title="촬영"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/storageItem"
+        android:icon="@drawable/storageitem_selector"
+        android:title="보관함"
+        android:enabled="true"/>
+</menu>
