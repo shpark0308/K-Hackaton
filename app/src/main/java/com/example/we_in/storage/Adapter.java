@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.example.we_in.R;
@@ -46,8 +47,7 @@ public class Adapter extends PagerAdapter {
         inflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v=inflater.inflate(R.layout.item,container,false);
 
-        final ImageView imageMain;
-        ImageView imageView1, imageView2;
+        ImageView imageMain, imageView1, imageView2;
         TextView title, desc;
 
         imageMain=v.findViewById(R.id.front);
@@ -65,19 +65,19 @@ public class Adapter extends PagerAdapter {
         front_anim= (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.front_animator);
         back_anim= (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.back_animator);
 
+        /*Card Flip*/
         float scale=context.getResources().getDisplayMetrics().density;
 
-        imageMain.setCameraDistance(8000*scale);
-        final RelativeLayout cardBack =v.findViewById(R.id.back);
+        final CardView cardFront =v.findViewById(R.id.cardMainFront);
+        cardFront.setCameraDistance(8000*scale);
+        final CardView cardBack =v.findViewById(R.id.cardMainBack);
         cardBack.setCameraDistance(8000*scale);
 
-        Button button=v.findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        imageMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(images.get(position).isFront()){
-                    front_anim.setTarget(imageMain);
-
+                    front_anim.setTarget(cardFront);
                     back_anim.setTarget(cardBack);
                     front_anim.start();
                     back_anim.start();
@@ -85,7 +85,7 @@ public class Adapter extends PagerAdapter {
                 }
                 else{
                     front_anim.setTarget(cardBack);
-                    back_anim.setTarget(imageMain);
+                    back_anim.setTarget(cardFront);
                     back_anim.start();
                     front_anim.start();
                     images.get(position).setFront(true);

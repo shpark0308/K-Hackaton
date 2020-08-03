@@ -46,33 +46,35 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardMainFront"
         android:layout_width="228dp"
         android:layout_height="410dp"
         android:layout_centerInParent="true"
         app:cardCornerRadius="20dp"
         app:cardElevation="2dp">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="13dp"
-            android:layout_height="13dp"
-
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="380dp"
-            android:background="@drawable/cycle" />
-
         <ImageView
             android:id="@+id/front"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:clickable="true"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMainBack"
+        android:layout_width="228dp"
+        android:layout_height="410dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp"
+        android:alpha="0" >
 
         <RelativeLayout
             android:id="@+id/back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FF5D21"
-            android:alpha="0" >
+            android:background="#FF5D21" >
 
             <TextView
                 android:id="@+id/title"
