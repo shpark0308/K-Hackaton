@@ -29,12 +29,19 @@
             android:fontFamily="@font/apple_sd_gothic_neo_b"/>
     </LinearLayout>
 
-    <androidx.viewpager.widget.ViewPager
+    <!--androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="410dp"
-        android:layout_marginTop="139dp" >
-    </androidx.viewpager.widget.ViewPager>
+        android:layout_marginTop="139dp">
+    </androidx.viewpager.widget.ViewPager-->
+
+    <androidx.viewpager2.widget.ViewPager2
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_marginTop="139dp"/>
 
     <RelativeLayout
         android:layout_width="80dp"
