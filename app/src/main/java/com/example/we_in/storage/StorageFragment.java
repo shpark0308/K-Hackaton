@@ -9,7 +9,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.CompositePageTransformer;
+import androidx.viewpager2.widget.MarginPageTransformer;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.we_in.R;
 
@@ -18,11 +21,11 @@ import java.util.List;
 
 public class StorageFragment extends Fragment {
     ViewGroup viewGroup;
+    ViewPager2 viewPager2;
+    Adapter adapter;
 
     List<Images> images;
     TextView tv_picnum;
-    ViewPager viewPager;
-    Adapter adapter;
 
     @Nullable
     @Override
@@ -37,27 +40,37 @@ public class StorageFragment extends Fragment {
         tv_picnum = viewGroup.findViewById(R.id.tv_picnum);
         tv_picnum.setText("/"+images.size());
 
+        viewPager2 = viewGroup.findViewById(R.id.viewPager);
         adapter=new Adapter(images,this.getContext());
-        viewPager=viewGroup.findViewById(R.id.viewPager);
-        viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        viewPager2.setAdapter(adapter);
+
+        viewPager2.setClipToPadding(false);
+        viewPager2.setClipChildren(false);
+        viewPager2.setOffscreenPageLimit(3);
+        viewPager2.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_ALWAYS);
+
+        CompositePageTransformer compositePageTransformer=new CompositePageTransformer();
+        compositePageTransformer.addTransformer(new MarginPageTransformer(40)); // 카드 사이 간격
+        compositePageTransformer.addTransformer(new ViewPager2.PageTransformer() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+            public void transformPage(@NonNull View view, float position) {
+                float r= 1 - Math.abs(position);
+                view.setScaleY(0.85f + r*0.15f);
+                view.setAlpha(0.35f + r*0.65f);
             }
+        });
 
+        viewPager2.setPageTransformer(compositePageTransformer);
+
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
                 TextView page=viewGroup.findViewById(R.id.page);
-                page.setText(position+1+"");
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
+                page.setText((position+1)+"");
             }
         });
 
         return viewGroup;
     }
+
 }

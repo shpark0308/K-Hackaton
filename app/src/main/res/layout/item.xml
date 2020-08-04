@@ -9,7 +9,8 @@
 
     <!--cardview elevation값 설정-->
     <!--Image scaleType 정하기-->
-    <androidx.cardview.widget.CardView
+
+    <!--<androidx.cardview.widget.CardView
         android:id="@+id/prevCard"
         android:layout_width="185dp"
         android:layout_height="335dp"
@@ -43,12 +44,12 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:tint="#97E8E8E8" />
-    </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMainFront"
-        android:layout_width="228dp"
-        android:layout_height="410dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
         app:cardCornerRadius="20dp"
         app:cardElevation="2dp">
@@ -59,12 +60,13 @@
             android:layout_height="match_parent"
             android:scaleType="fitXY"
             android:clickable="true"/>
+
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMainBack"
-        android:layout_width="228dp"
-        android:layout_height="410dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
         app:cardCornerRadius="20dp"
         app:cardElevation="2dp"
