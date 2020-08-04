@@ -4,9 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 
 import com.example.we_in.camera.CameraCardDownFragment;
 import com.example.we_in.camera.CameraCardUpFragment;
@@ -16,6 +20,7 @@ import com.example.we_in.storage.StorageFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
     private BottomNavigationView bottomNavigationView;
 
     StampFragment stampFragment;
@@ -23,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     StorageFragment storageFragment;
     CameraCardDownFragment cameraCardDownFragment;
     CameraCardUpFragment cameraCardUpFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setItemIconTintList(null);
         bottomNavigationView.setItemIconSize(180);
         bottomNavigationView.setSelectedItemId(R.id.cameraItem);
+
 
         stampFragment = new StampFragment();
         cameraFragment = new CameraFragment();
@@ -89,5 +96,6 @@ public class MainActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,cameraCardDownFragment).commitAllowingStateLoss();
                 break;
         }
+
     }
 }

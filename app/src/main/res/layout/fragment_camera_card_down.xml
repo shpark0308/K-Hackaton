@@ -46,7 +46,7 @@
         android:layout_height="250dp"
         android:layout_marginTop="410dp">
         <LinearLayout
-            android:id="@+id/card_down"
+            android:id="@+id/card_down1"
             android:layout_width="380dp"
             android:layout_height="250dp"
             android:layout_gravity="center"
