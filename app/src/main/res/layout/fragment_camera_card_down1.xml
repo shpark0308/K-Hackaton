@@ -18,12 +18,6 @@
             android:scaleType="centerCrop"
             android:layout_gravity="center"
             android:background="@android:color/transparent"/>
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="눌러봐"/>
         <LinearLayout
             android:gravity="center"
             android:layout_gravity="center"
@@ -49,12 +43,12 @@
     </LinearLayout>
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="650dp"
+        android:layout_height="1050dp"
         android:layout_marginTop="10dp">
         <LinearLayout
             android:id="@+id/card_down"
             android:layout_width="380dp"
-            android:layout_height="250dp"
+            android:layout_height="650dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="400dp"
             android:orientation="vertical"
@@ -196,39 +190,17 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/card_up"
-            android:onClick="onClick"
+            android:id="@+id/first_open"
+            android:clickable="true"
             android:layout_width="380dp"
-            android:layout_height="650dp"
-            android:visibility="invisible"
+            android:layout_marginTop="330dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
             android:layout_gravity="center"
-            android:orientation="vertical"
-            android:background="@drawable/shape7">
-            <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="5dp"
-                android:background="#AFAFAD"
-                android:layout_marginTop="13dp"
-                android:gravity="center_horizontal"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp"
-                android:fontFamily="monospace"
-                android:gravity="center"
-                android:text="경복궁"
-                android:textAlignment="center"
-                android:textColor="#FF5D21"
-                android:textSize="21dp"
-                android:textStyle="bold" />
+            android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="30dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginRight="13dp"
                 android:orientation="vertical"
@@ -313,128 +285,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/info13" />
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_marginTop="435dp"
-            android:orientation="vertical"
-            android:weightSum="4">
-            <LinearLayout
-                android:orientation="horizontal"
-                android:weightSum="7"
-                android:layout_weight="2.1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:id="@+id/first_btnfirst1"
-                    android:layout_marginTop="70dp"
-                    android:layout_weight="1"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:clickable="true">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="1390's"
-                        android:textSize="15dp"
-                        android:textColor="#FF5D21"
-                        android:gravity="center"
-                        android:layout_gravity="center"/>
-                    <ImageView
-                        android:layout_marginTop="3dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/shape3"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/first_btnsecond1"
-                    android:layout_marginTop="70dp"
-                    android:layout_weight="1"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:clickable="true">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="1390's"
-                        android:textSize="15dp"
-                        android:textColor="#6C6C6C"
-                        android:gravity="center"
-                        android:layout_gravity="center"/>
-                    <ImageView
-                        android:layout_marginTop="3dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/shape8"/>
-                </LinearLayout>
-                <ImageButton
-                    android:layout_weight="3"
-                    android:id="@+id/btn_camera1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/shape1"
-                    android:layout_marginTop="27dp"
-                    android:layout_centerHorizontal="true"
-                    android:background="@android:color/transparent"
-                    android:onClick="onClick"/>
-                <LinearLayout
-                    android:id="@+id/first_btnthird1"
-                    android:layout_marginTop="70dp"
-                    android:layout_weight="1"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:clickable="true">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="1390's"
-                        android:textSize="15dp"
-                        android:textColor="#6C6C6C"
-                        android:gravity="center"
-                        android:layout_gravity="center"/>
-                    <ImageView
-                        android:layout_marginTop="3dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/shape8"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/first_btnfourth1"
-                    android:layout_marginTop="70dp"
-                    android:layout_weight="1"
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:clickable="true">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="1390's"
-                        android:textSize="15dp"
-                        android:textColor="#6C6C6C"
-                        android:gravity="center"
-                        android:layout_gravity="center"/>
-                    <ImageView
-                        android:layout_marginTop="3dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/shape8"/>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_weight="1.9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
             </LinearLayout>
         </LinearLayout>
 
