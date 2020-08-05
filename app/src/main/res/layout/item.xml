@@ -10,42 +10,6 @@
     <!--cardview elevation값 설정-->
     <!--Image scaleType 정하기-->
 
-    <!--<androidx.cardview.widget.CardView
-        android:id="@+id/prevCard"
-        android:layout_width="185dp"
-        android:layout_height="335dp"
-        android:layout_marginLeft="-50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="2dp" >
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:tint="#97E8E8E8" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/nextCard"
-        android:layout_width="185dp"
-        android:layout_height="335dp"
-        android:layout_marginRight="-50dp"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="2dp" >
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:tint="#97E8E8E8" />
-    </androidx.cardview.widget.CardView>-->
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardMainFront"
         android:layout_width="match_parent"
@@ -87,7 +51,7 @@
                 android:text="경복궁"
                 android:textSize="20sp"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold" />
+                android:fontFamily="@font/apple_sd_gothic_neo_b" />
 
             <TextView
                 android:id="@+id/subTitle"
@@ -98,7 +62,7 @@
                 android:text="개설"
                 android:textSize="16sp"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold" />
+                android:fontFamily="@font/apple_sd_gothic_neo_b" />
 
             <TextView
                 android:id="@+id/description"
@@ -109,21 +73,25 @@
                 android:layout_marginTop="120dp"
                 android:lineSpacingExtra="10sp"
                 android:text="This is description"
+                android:textSize="13sp"
                 android:textColor="#FFFFFF"
-                android:textSize="13sp" />
+                android:fontFamily="@font/apple_sd_gothic_neo_m"/>
 
             <TextView
                 android:id="@+id/date"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:text="2020.07.05 14:30"
                 android:textSize="14sp"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold" />
+                android:fontFamily="@font/apple_sd_gothic_neo_b" />
+
         </RelativeLayout>
+
     </androidx.cardview.widget.CardView>
+
 </RelativeLayout>
