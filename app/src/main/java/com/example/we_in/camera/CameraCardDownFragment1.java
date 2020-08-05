@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -16,7 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.we_in.R;
 
-public class CameraCardDownFragment extends Fragment { // Test
+public class CameraCardDownFragment1 extends Fragment { // Test
     LinearLayout carddown1,cardopen;
     ViewGroup viewGroup;
     Animation translateUp = null;
