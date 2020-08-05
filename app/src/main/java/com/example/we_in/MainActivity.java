@@ -4,16 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
 
-import com.example.we_in.camera.CameraCardDownFragment;
-import com.example.we_in.camera.CameraCardUpFragment;
+import com.example.we_in.camera.CameraCardDownFragment1;
 import com.example.we_in.camera.CameraFragment;
 import com.example.we_in.stamp.StampFragment;
 import com.example.we_in.storage.StorageFragment;
@@ -26,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
     StampFragment stampFragment;
     CameraFragment cameraFragment;
     StorageFragment storageFragment;
-    CameraCardDownFragment cameraCardDownFragment;
-    CameraCardUpFragment cameraCardUpFragment;
+    CameraCardDownFragment1 cameraCardDownFragment1;
 
 
     @Override
@@ -44,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
         stampFragment = new StampFragment();
         cameraFragment = new CameraFragment();
         storageFragment = new StorageFragment();
-        cameraCardDownFragment = new CameraCardDownFragment();
-        cameraCardUpFragment = new CameraCardUpFragment();
+        cameraCardDownFragment1 = new CameraCardDownFragment1();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,cameraFragment).commitAllowingStateLoss();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -87,13 +80,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_camera:
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,cameraCardDownFragment).commitAllowingStateLoss();
-                break;
-            case R.id.card_down:
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,cameraCardUpFragment).commitAllowingStateLoss();
-                break;
-            case R.id.card_up:
-                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,cameraCardDownFragment).commitAllowingStateLoss();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,cameraCardDownFragment1).commitAllowingStateLoss();
                 break;
         }
 
