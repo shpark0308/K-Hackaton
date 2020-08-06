@@ -7,6 +7,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -49,6 +50,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewPagerViewHolder>{
 
         private ImageView imageView;
         private TextView title, desc;
+        private EditText editText;
         private CardView cardFront, cardBack;
 
         ViewPagerViewHolder(@NonNull View itemView) {
@@ -57,6 +59,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewPagerViewHolder>{
 
             title=itemView.findViewById(R.id.title);
             desc=itemView.findViewById(R.id.description);
+            editText=itemView.findViewById(R.id.diary);
 
             front_anim= (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.front_animator);
             back_anim= (AnimatorSet) AnimatorInflater.loadAnimator(context,R.animator.back_animator);
@@ -85,6 +88,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewPagerViewHolder>{
                         front_anim.start();
                         back_anim.start();
                         image.setFront(false);
+                        editText.setEnabled(true);
                     }
                     else{
                         front_anim.setTarget(cardBack);
@@ -92,6 +96,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewPagerViewHolder>{
                         back_anim.start();
                         front_anim.start();
                         image.setFront(true);
+                        editText.setEnabled(false);
                     }
                 }
             });

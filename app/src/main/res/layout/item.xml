@@ -22,8 +22,8 @@
             android:id="@+id/front"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:scaleType="fitXY" />
 
     </androidx.cardview.widget.CardView>
 
@@ -44,10 +44,11 @@
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="200dp"
-                android:layout_height="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
-                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:text="경복궁"
                 android:textSize="20sp"
                 android:textColor="#FFFFFF"
@@ -55,27 +56,74 @@
 
             <TextView
                 android:id="@+id/subTitle"
-                android:layout_width="200dp"
-                android:layout_height="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="85dp"
-                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:text="개설"
                 android:textSize="16sp"
                 android:textColor="#FFFFFF"
                 android:fontFamily="@font/apple_sd_gothic_neo_b" />
 
-            <TextView
-                android:id="@+id/description"
-                android:layout_width="200dp"
-                android:layout_height="250dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="120dp"
-                android:lineSpacingExtra="10sp"
-                android:text="This is description"
-                android:textSize="13sp"
+                android:layout_marginRight="25dp"
+                android:fadeScrollbars="false"
+                android:scrollbarSize="2dp"
+                android:scrollbarThumbVertical="@color/colorPrimaryDark" >
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:lineSpacingExtra="10sp"
+                    android:text="This is description"
+                    android:textSize="13sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/apple_sd_gothic_neo_m" />
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/subTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="240dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:text="일기"
+                android:textSize="16sp"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/apple_sd_gothic_neo_m"/>
+                android:fontFamily="@font/apple_sd_gothic_neo_b" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="275dp"
+                android:layout_marginRight="25dp"
+                android:fadeScrollbars="false"
+                android:scrollbarSize="2dp"
+                android:scrollbarThumbVertical="@color/colorPrimaryDark" >
+
+                <EditText
+                    android:id="@+id/diary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:lineSpacingExtra="8sp"
+                    android:hint="내용을 입력하세요"
+                    android:textSize="13sp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:fontFamily="@font/apple_sd_gothic_neo_m" />
+
+            </ScrollView>
 
             <TextView
                 android:id="@+id/date"
