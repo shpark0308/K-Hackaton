@@ -40,7 +40,8 @@
             android:id="@+id/back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FF5D21" >
+            android:background="#FF5D21"
+            android:visibility="gone" >
 
             <TextView
                 android:id="@+id/title"
@@ -115,7 +116,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
-                    android:enabled="false"
                     android:lineSpacingExtra="8sp"
                     android:hint="내용을 입력하세요"
                     android:textSize="13sp"
